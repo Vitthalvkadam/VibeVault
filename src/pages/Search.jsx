@@ -6,7 +6,7 @@ import { createDebouncedYouTubeSearch, YT_ERROR } from '../services/youtubeApi'
 
 const YT_ERROR_MESSAGES = {
   [YT_ERROR.MISSING_KEY]:
-    'YouTube search isn\u2019t configured yet — add VITE_YOUTUBE_API_KEY to your .env file.',
+    'SOMETHING IS WRONG HERE ...',
   [YT_ERROR.QUOTA]: 'YouTube search quota reached for today. Local results are still available.',
   [YT_ERROR.NETWORK]: 'Couldn\u2019t reach YouTube — check your connection and try again.',
   [YT_ERROR.UNKNOWN]: 'YouTube search failed. Local results are still available.',
@@ -15,7 +15,7 @@ const YT_ERROR_MESSAGES = {
 export default function Search() {
   const { library } = useMusic()
   const [query, setQuery] = useState('')
-  const [scope, setScope] = useState('all') // all | songs | artists | uploads
+  const [scope, setScope] = useState('all') 
 
   const [ytResults, setYtResults] = useState([])
   const [ytLoading, setYtLoading] = useState(false)
@@ -127,7 +127,7 @@ export default function Search() {
           {includeYoutube && ytLoading && (
             <div className="col-span-full flex items-center gap-2 text-muted text-sm py-2">
               <Loader2 size={16} className="animate-spin" />
-              Searching YouTube...
+              Searching ( Wait a Second )...
             </div>
           )}
         </div>
