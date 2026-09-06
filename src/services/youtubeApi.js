@@ -2,7 +2,7 @@
 // Uses the official /search endpoint only — no download/scrape/mp3-extraction of any kind.
 // Playback happens later via the official YouTube IFrame Player (see components/YouTubePlayer.jsx).
 
-const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
+const API_KEY = import.meta.env.example.VITE_YOUTUBE_API_KEY
 const SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search'
 
 export const YT_ERROR = {
